@@ -1,0 +1,181 @@
+
+h1, h2
+{
+    border-bottom: 1px solid $secondary-color;
+}
+
+/*******************************************************************************
+    base.html
+*******************************************************************************/
+
+.top-bar-section .dropdown
+{
+    background-color: $topbar-link-bg-hover;
+    padding: 10px;
+}
+
+.top-bar
+{
+    border-bottom: 3px solid $secondary-color;
+
+    ul, li, a
+    {
+        height: $topbar-height - 3px;
+    }
+}
+
+.ico-link
+{
+    display: block;
+    position: relative;
+}
+
+.ico-messages
+{
+    display: block;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+.ico-messages
+{
+    background-image: url(/static/sprite/messages.png);
+}
+
+.ico-notifs
+{
+    background-image: url(/static/sprite/notifications.png);
+}
+
+.ico-alerts
+{
+    background-image: url(/static/sprite/alerts.png);
+}
+
+
+/*+++++++++++++++++++++++*/
+
+
+.ico-link
+{
+    display: block;
+    position: relative;
+    width: 33.3%;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+
+    .notif-count, .notif-text
+    {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+    }
+
+    .notif-count
+    {
+        z-index: 1;
+
+        height: 16px;
+        line-height: 14px;
+
+        margin: -20px -22px 0 0;
+        padding: 0 5px;
+    }
+    .notif-text
+    {
+        text-indent: -9999px;
+
+        height: 22px;
+        width: 22px;
+
+        margin: -11px 0 0 -11px;
+    }
+
+}
+/*+++++++++++++++++++++++*/
+
+
+.breadcrumbs_bar
+{
+    background-color: rgb(238, 238, 238);
+
+    ul, form, input, button, a
+    {
+        margin-bottom: 0;
+    }
+
+    input[type="text"]
+    {
+        width: auto !important;
+        display: inline-block !important;
+    }
+}
+
+.sidebar
+{
+    background-color: rgb(240, 240, 240);
+
+    h2
+    {
+        font-size: 120%;
+        padding: 5px;
+    }
+
+    li
+    {
+        list-style-type: none;
+        padding-left: 40px;
+    }
+
+    li:hover
+    {
+        background-color: rgb(213, 213, 213);
+    }
+}
+
+/*******************************************************************************
+    home.html
+*******************************************************************************/
+
+.pre_content_quote
+{
+    font-style: italic;
+    color: $primary-color;
+
+    background-color: rgb(233, 231, 228);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3) inset;
+}
+
+.pre_content
+{
+    background-color: rgb(238, 238, 238);
+    padding-top: 15px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+
+    input
+    {
+        border: 1px solid $secondary-color;
+    }
+}
+
+.clem_citation
+{
+    margin: 20px 0 20px 0;
+}
+
+
+.tutorial-infos
+{
+    padding-bottom: 10px;
+}
+
+.article-metadata
+{
+    color: $secondary-color;
+}
+

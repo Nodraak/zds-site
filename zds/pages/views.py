@@ -43,9 +43,22 @@ def home(request):
     except:
         quote = settings.ZDS_APP['site']['slogan']
 
+
+    from django.utils import timezone
+    from datetime import timedelta
+    last_articles = []
+    for i in range(10):
+        article = {}
+        article['image'] = 'http://zestedesavoir.com/media/articles/98/6a7749e2-24ff-486f-a4b2-948f68fb2d66.png.60x60_q85_crop.png'
+        article['title'] = 'Un super titre'
+        article['pubdate'] = timezone.now() - timedelta(days=10)
+        article['description'] = 'Ceci est un test. D\'ailleurs je devrait metre du lorem'
+        article['get_reaction_count'] = 42
+        last_articles.append(article)
+
     return render_template('home.html', {
         'last_tutorials': tutos,
-        'last_articles': articles,
+        'last_articles': last_articles,
         'quote': quote,
     })
 
