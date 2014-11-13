@@ -82,9 +82,11 @@
         {% block canonical %}{% endblock %}
     {% endif %}
 
+    <link href="/static/stylesheets/app.css" media="all" rel="stylesheet" type="text/css" />
 
     {# Webfont async loading #}
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro:400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
+    <script src="/static/javascripts/vendor/custom.modernizr.js"></script>
 
 
     {# favicons #}
@@ -567,7 +569,15 @@
     {% else %}
         <script src="/static/js/all.min.js"></script>
     {% endif %}
+    <script src="/static/javascripts/vendor/jquery.js"></script>
+    <script src="/static/javascripts/foundation/foundation.js"></script>
+    <script src="/static/javascripts/foundation/foundation.topbar.js"></script>
+    <script src="/static/javascripts/foundation/foundation.alerts.js"></script>
+    <script src="/static/javascripts/foundation/foundation.dropdown.js"></script>
 
+    <script>
+        $(document).foundation();
+    </script>
 
 
     {# MathJax #}
